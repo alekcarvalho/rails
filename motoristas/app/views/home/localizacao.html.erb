@@ -1,0 +1,103 @@
+<script type="text/javascript">
+if(window.location.href.substr(-2) !== "?r") {
+window.location = window.location.href + "?r";
+}
+</script>
+
+
+<div class="col-lg-12 lista-m">
+<h1>Localização</h1>
+</div>
+
+<div id="localizacao">
+<div class="col-lg-3 col-md-3 left-cont">
+
+<p id="notice"><%= notice %></p>
+
+
+    <% @motorista.each do |motoristum| %>
+     <div class="content-box tuts">
+      <div class="col-lg-3 col-md-5 col-xs-4 np">
+       <img src="https://u.o0bc.com/avatars/stock/_no-user-image.gif" alt="" width="100%">
+         </div>
+         <div class="col-lg-9 col-md-7 col-xs-8">
+        <h5><%= motoristum.nome %></h5>
+        <p><span>CPF:</span> <%= motoristum.cpf %></p>
+        <p><span>Caminhão:</span> <%= motoristum.tipo_caminhao %></p>
+         </div>
+      </div>
+    <% end %>
+</div>
+
+
+
+<div class="col-lg-9 col-md-9">
+    <div id="map"></div>
+   </div>
+</div>
+
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+<script>
+// Define your locations: HTML content for the info window, latitude, longitude
+    var locations = [
+         <% @motorista.each do |motoristum| %>
+      ['<h4><%= motoristum.nome %></h4><p><span>CPF:</span> <%= motoristum.cpf %></p><p><span>Tipo de Caminhão:</span> <%= motoristum.tipo_caminhao %></p><p><span>Lat:</span> <%= motoristum.latitude %></p><p><span>Long:</span> <%= motoristum.longitude %></p>', <%= motoristum.latitude %>, <%= motoristum.longitude %>],
+         <% end %>
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom:11,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      maxWidth: 160
+    });
+
+    var markers = new Array();
+    
+    var iconCounter = 0;
+    
+    // Add the markers and infowindows to the map
+    for (var i = 0; i < locations.length; i++) {  
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+      });
+
+      markers.push(marker);
+        
+
+//        google.maps.event.addListener(marker, "click", function () {
+//			$('.tuts').css('background', '#e4e4e4');
+//                    $(".dropdown").removeClass("is-expanded");
+//                    var target = $('.tuts');
+//                    $('html,body').animate({
+//                            scrollTop: target.offset().top
+//                        }, 1000);
+//                    return false;
+//        });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+      
+      
+    }
+
+    function autoCenter() {
+      //  Create a new viewpoint bound
+      var bounds = new google.maps.LatLngBounds();
+      //  Go through each...
+      for (var i = 0; i < markers.length; i++) {  
+				bounds.extend(markers[i].position);
+      }
+      //  Fit these bounds to the map
+      map.fitBounds(bounds);
+    }
+    autoCenter();
+</script>

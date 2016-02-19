@@ -1,0 +1,411 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #eee!important;
+    font-family: 'Roboto', sans-serif!important;
+}
+
+.container2 {
+    padding: 0 20px;
+}
+
+#localizacao {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.lista-m h1 {
+    font-size: 25px!important;
+    font-weight: 300!important;
+    color: #fff;
+    background: #f14444;
+    padding: 10px;
+}
+
+.lista-m {
+    margin-bottom: -10px;
+}
+
+h5 {
+    text-transform: uppercase!important;
+    font
+}
+
+span {
+    font-weight: bold!important;
+}
+
+.np {
+    padding: 0!important;
+}
+
+.tuts p {
+    font-size: 13px;
+}
+
+#conteudo {
+    padding: 20px 20px 0 20px;
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+.local {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+nav.navbar-findcond {
+    background: #fff;
+    border-color: #ccc;
+    box-shadow: 0 0 2px 0 #ccc;
+}
+
+nav.navbar-findcond a {
+    color: #f14444;
+}
+
+.navbar-brand {
+    font-size: 26px!important;
+}
+
+nav.navbar-findcond ul.navbar-nav a {
+    color: #f14444;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: #fff;
+}
+
+nav.navbar-findcond ul.navbar-nav a:hover,
+nav.navbar-findcond ul.navbar-nav a:visited,
+nav.navbar-findcond ul.navbar-nav a:focus,
+nav.navbar-findcond ul.navbar-nav a:active {
+    background: #fff;
+}
+
+nav.navbar-findcond ul.navbar-nav a:hover {
+    border-color: #f14444;
+}
+
+nav.navbar-findcond li.divider {
+    background: #ccc;
+}
+
+nav.navbar-findcond button.navbar-toggle {
+    background: #f14444;
+    border-radius: 2px;
+}
+
+nav.navbar-findcond button.navbar-toggle:hover {
+    background: #999;
+}
+
+nav.navbar-findcond button.navbar-toggle > span.icon-bar {
+    background: #fff;
+}
+
+nav.navbar-findcond ul.dropdown-menu {
+    border: 0;
+    background: #fff;
+    border-radius: 4px;
+    margin: 4px 0;
+    box-shadow: 0 0 4px 0 #ccc;
+}
+
+nav.navbar-findcond ul.dropdown-menu > li > a {
+    color: #444;
+}
+
+nav.navbar-findcond ul.dropdown-menu > li > a:hover {
+    background: #f14444;
+    color: #fff;
+}
+
+nav.navbar-findcond span.badge {
+    background: #f14444;
+    font-weight: normal;
+    font-size: 11px;
+    margin: 0 4px;
+}
+
+nav.navbar-findcond span.badge.new {
+    background: rgba(255, 0, 0, 0.8);
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    background: none!important;
+}
+
+.bbox {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+
+.tbox {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px!important;
+}
+
+.tbox table {
+    width: 100%;
+}
+
+.tbox table td a {
+    padding: 5px 8px;
+    background: #5cb85c;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.tbox table td a:hover {
+    text-decoration: none;
+    background: #72b972;
+    color: #fff;
+}
+
+.new-mot {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.new-mot a {
+    padding: 10px 18px;
+    background: #337ab7;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.new-mot a:hover {
+    text-decoration: none;
+    background: #4a8bc3;
+    color: #fff;
+}
+
+.content-box {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    margin-bottom: 10px;
+    padding: 10px;
+    float: left;
+    padding-bottom: 0;
+}
+
+.left-cont {
+    margin: 0;
+    padding: 0;
+    margin-top: -10px;
+}
+
+#mainWrapper {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: -20px;
+    position: absolute;
+}
+
+#mainWrapper h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 53px;
+    padding-top: 20%;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+
+#mainWrapper .capture a {
+    padding: 12px 18px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    background: #f14444;
+    border-radius: 3px;
+}
+
+#mainWrapper .capture a:hover {
+    text-decoration: none;
+    background: #ed5656;
+}
+
+.bg-blur {
+    z-index: -2;
+    opacity: 1;
+    position: absolute;
+    min-height: 100%;
+    height: 100% display: block;
+    top: 0;
+    max-height: none;
+    left: -10%;
+    width: 120%;
+}
+
+.bg-blur-overlay {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.15+0,1+100 */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjE1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 1) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 1)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 1) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 1) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 1) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 1) 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#000000', GradientType=0);
+    /* IE6-8 */
+}
+
+.col-centered {
+    margin: 0;
+    padding: 0!important;
+}
+
+.editc a {
+    color: #F14444!important;
+}
+
+form .field input {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-bottom: 10px;
+}
+
+form .field label {}
+
+form .actions {
+    margin-top: 10px;
+}
+
+form .actions input {
+    padding: 10px 35px;
+    background: #337ab7;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+form .actions input:hover {
+    text-decoration: none;
+    background: #4a8bc3;
+    color: #fff;
+}
+
+footer {
+    background: #F14444;
+    float: left;
+    width: 100%;
+    padding: 20px 20px 40px 20px;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+@media only screen and (min-width:800px) and (max-width:990px) {
+    .tuts {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #mainWrapper h1 {
+        font-size: 32px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .td2,
+    .td3,
+    .td4,
+    .td5,
+    .td6 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:401px) and (max-width:550px) {
+    .td2,
+    .td3,
+    .td4,
+    .td5,
+    .td6 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:551px) and (max-width:850px) {
+    .td4,
+    .td5,
+    .td6 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .col-centered {
+        float: none!important;
+        margin: 0 auto;
+    }
+}

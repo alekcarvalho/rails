@@ -1,0 +1,43 @@
+<div class="col-lg-12 lista-m">
+<h1>Motorista</h1>
+</div>
+
+<div class="col-lg-12 bbox editc">
+<div class="content-box tbox">
+<div class="col-lg-3 col-centered">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @motoristum.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @motoristum.cpf %>
+</p>
+
+<p>
+  <strong>Tipo caminhao:</strong>
+  <%= @motoristum.tipo_caminhao %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @motoristum.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @motoristum.longitude %>
+</p>
+
+<div class="show">
+<%= link_to 'Editar', edit_motoristum_path(@motoristum) %> |
+<%= link_to 'Voltar', motorista_path %>
+
+
+  </div>
+    </div>
+    </div>
+</div>
